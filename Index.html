@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Test</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2c3e50;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #34495e;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            color: #ecf0f1;
+            width: 400px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .subheading {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #bdc3c7; /* Lighter text for the subheading */
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yo, its just for fun (practice)?</h1>
+        <p class="subheading">Are you really here?</p>
+        <button onclick="sendMessage()">Yes</button>
+         <p class="subheading">agher button kam kar raha hy tu bata dyna 😉</p>
+    </div>
+
+    <script>
+        function sendMessage() {
+            // Replace 'your_username' with the Instagram username you want to send the message to
+            var username = 'm_shayan._';  
+            var message = 'Yes, Shayan, it works!';  // The pre-made message
+
+            // Open Instagram with a pre-filled message
+            var url = `https://instagram.com/${username}?text=${encodeURIComponent(message)}`;
+
+            window.location.href = url; // This will open the Instagram app
+        }
+    </script>
+</body>
+</html>
